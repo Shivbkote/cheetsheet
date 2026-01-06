@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Sheet</title>
+
+    <!-- LOCAL CSS FILES -->
+    <link rel="stylesheet" href="css/dflip.min.css">
+    <link rel="stylesheet" href="css/themify-icons.min.css">
+    <link rel="stylesheet" href="cheetsheet.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/dflip.min.js"></script>
+    <script src="cheetsheet.js"></script>
+
+
+</head>
+
+<body>
+
+    <main>
+        <!-- SIDEBAR -->
+        <aside>
+            <div class="logo">
+                <img src="learnmagica.png" alt="Logo">
+                <span>Learn Magica</span>
+            </div>
+
+            <div class="sidebar-content">
+                <!-- SIDEBAR NAVIGATION HEADER -->
+                <div class="sidebar-nav">
+                    <button class="nav-back-btn">
+                        <span class="arrow-icon bold-arrow">❮</span>
+                        Back to Courses
+                    </button>
+
+
+                    <nav class="nav-breadcrumb">
+                        <span>Home</span>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="active" id="breadcrumbSubject">Select Subject</span>
+                    </nav>
+                </div>
+
+
+                <label>Select Subject</label>
+                <select onchange="changeSubject(this.value)">
+                    <option value="">-- Select a Subject --</option>
+                    <option>Advanced Mathematics</option>
+                    <option>Quantum Physics</option>
+                    <option>Inorganic Chemistry</option>
+                </select>
+
+                <label style="margin-top:18px;">Chapters</label>
+                <div id="chapterList">
+                    <p style="font-size:12px;color:#94a3b8;">Choose a subject to see chapters</p>
+                </div>
+            </div>
+
+            <div class="logout">
+                <button>Logout</button>
+            </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <section>
+            <button class="fullscreen-btn" id="fsBtn" onclick="toggleFullScreen()">⛶</button>
+
+            <div class="pdf-viewer">
+                <div id="emptyState">
+                    <h3>Ready to learn?</h3>
+                    <p class="text-slate-00 text-sm leading-relaxed">
+                        Please select a <b>Subject</b> and a <b>Chapter</b> from the sidebar to begin your study
+                        session.
+                    </p>
+                </div>
+                <div id="flipbookContainer"></div>
+            </div>
+        </section>
+
+        <!-- MOBILE LOGOUT (Below PDF View) -->
+        <div class="mobile-logout">
+            <button>Logout</button>
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>
